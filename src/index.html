@@ -16,6 +16,7 @@
     body
     {
         height: 100%;
+        background-color: #008B8B;
     }
 </style>
 
@@ -23,19 +24,23 @@
 <body>
     
     <div class="h-100 d-flex justify-content-center align-items-center">
-        <div class="card" style="width: 18rem; height: 18rem;">
-            <div class="card-body d-flex align-items-center justify-content-start flex-column">
-                <h5 class="card-title">Guess a number</h5>
+        <div class="card border border-success rounded" style="width: 20rem; height: 20rem;">
+            <div class="card-body d-flex align-items-center justify-content-evenly flex-column">
+                <div>
+                    <h4 class="card-title fw-bold">Guess a number</h5>
+                </div>
                 <div class="text-center">
-                    <input type="text">
-                    <button type="submit" class="btn btn-success mt-4">Make Guess</button>
+                    <form action="">
+                        <input type="number">
+                        <button type="submit" class="btn mt-4 text-white" style="background-color: #008B8B;">Make Guess</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
     
-    <h5 class="card-title">Guessing Game</h5>
+    <!-- <h5 class="card-title">Guessing Game</h5>
     <input type="text">
-    <button type="submit" class="btn btn-success mt-2">Make Guess</button>
+    <button type="submit" class="btn btn-success mt-2">Make Guess</button> -->
 </body>
 </html>
