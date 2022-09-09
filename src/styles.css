@@ -1,2 +1,25 @@
-/* no...
-/* brandon
+html,
+body
+{
+    height: 100%;
+    background-color: #008B8B;
+}
+
+input
+{
+    padding: 5px;
+    width: 15vw;
+    height: 4vh;
+}
+input:focus
+{
+    outline: none;
+}
+
+.difficulty-btn
+{
+    width: 7rem;
+    height: 3rem;
+    font-size: 20px;
+    font-weight: 600;
+}
