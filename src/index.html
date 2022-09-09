@@ -48,13 +48,19 @@
     <div class="h-100 d-flex justify-content-center">
         <div class="row justify-content-center p-5">
             <div class="col-12 text-center">
+
                 <h1 class="text-white fw-bold">Number Guessing Game</h1>
 
-                <h4 id="guesses-left">Number of guesses left: </h4>
-                <h4 id="guesses-left">Current Guess: </h4>
-                <h4 id="guesses-left">The number is lower</h4>
+                <!-- <h4 id="difficulty-prompt">Choose the difficulty you would like</h4> -->
+
+                <div id="main-game-text" class="mt-3" style="display: inline-block;">
+                    <h4 id="guesses-left" class="text-white fw-bold">Number of guesses left: 3</h4>
+                    <h4 id="current-guess" class="text-white fw-bold mt-3">Current Guess: <br>3</h4>
+                    <h4 id="guess-hint" class="text-white fw-bold mt-3">Your guess is higher than the answer</h4>
+                </div>
+
             </div>
-            <div class="col-12 card border rounded shadow-lg align-self-center" style="width: 22rem; height: 22rem;">
+            <div class="col-12 card border rounded shadow-lg align-self-center mb-3" style="width: 22rem; height: 22rem;">
                 <div class="card-body d-flex align-items-center justify-content-start flex-column">
                     <div>
                         <h3 class="card-title fw-bold mt-4">Guess a number</h3>
@@ -63,22 +69,26 @@
                         <form action="">
                             <input id="user-guess" type="text" class="rounded border border-2 border-success" placeholder="guess"
                             oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
-                            <button type="submit" class="btn mt-5 text-white w-75 rounded-pill" style="background-color: #008B8B; height: 5vh;">Make Guess</button>
+                            <button id="guess-submit" type="submit" class="btn mt-5 text-white w-75 rounded-pill" style="background-color: #008B8B; height: 5vh;">Make Guess</button>
                         </form>
                     </div>
                 </div>
             </div>
 
             <div class="col-12 d-flex justify-content-center align-items-start">
-                <div class="btn-group" role="group" aria-label="...">
+                <div id="difficulty-buttons" class="btn-group" role="group" aria-label="..." style="display: none;">
                     <button type="button" class="difficulty-btn btn text-muted mx-3 rounded" style="background-color: #4FFFB0;">Easy</button>
                     <button type="button" class="difficulty-btn btn text-muted bg-warning rounded">Normal</button>
                     <button type="button" class="difficulty-btn btn text-dark bg-danger mx-3 rounded">Insane!!</button>
                 </div>
+                <div class="text-center">
+                    <h3 class="text-white fw-bold">Guess List:</h3>
+                    <h3 class="text-white fw-bold">34</h3>
+                    <h3 class="text-white fw-bold">Guess List:</h3>
+
+                </div>
             </div>
-            <div class="text-center">
-                <h3>Guess List</h3>
-            </div>
+            
         </div>
     </div>
     
