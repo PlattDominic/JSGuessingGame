@@ -13,9 +13,11 @@
 </head>
 <body>
 
-    
+    <!-- Main container that will contain all main elements in page, also a flex box too -->
     <div class="h-100 d-flex justify-content-center">
         <div class="row justify-content-center p-5">
+
+            <!--Container will have main text for page, such as displaying how many guesses the user has left -->
             <div class="col-12 text-center">
                 
                 <h1 class="text-white fw-bold">Number Guessing Game</h1>
@@ -33,27 +35,32 @@
                 
                 
             </div>
+            <!-- Card that will contain input for user to enter in guess -->
             <div class="col-12 card border rounded shadow-lg align-self-start mb-3" style="width: 22rem; height: 22rem;">
                 <div class="card-body d-flex align-items-center justify-content-start flex-column">
                     <div>
                         <h3 class="card-title fw-bold mt-4">Guess a number</h3>
+                        <h3 id="current-difficulty" class="text-center fw-bold"></h3>
                     </div>
-                    <div class="text-center" style="margin-top: 4rem;">
+                    <div class="text-center" style="margin-top: 3rem;">
+                        <!-- Form for user guessing -->
                         <form action="">
                             <input id="user-guess" type="text" class="border border-2 border-success px-2" placeholder="guess" style="border-radius: 15px;"
                             oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
-                            <button id="guess-submit" type="submit" class="btn mt-5 text-white w-75 rounded-pill" style="background-color: #008B8B; height: 4vh;">Make Guess</button>
+                            <button id="guess-submit" type="submit" class="btn mt-4 text-white w-75 rounded-pill" style="background-color: #008B8B; height: 4vh;">Make Guess</button>
                         </form>
                     </div>
                 </div>
             </div>
 
             <div class="col-12 d-flex justify-content-center align-items-start">
+                <!--Container will have buttons for user to choose what difficulty they want -->
                 <div id="difficulty-buttons" class="btn-group" role="group" aria-label="...">
                     <button onclick="chooseDifficulty('easy')" type="button" class="difficulty-btn btn text-muted mx-3 rounded" style="background-color: #4FFFB0;">Easy</button>
                     <button onclick="chooseDifficulty('normal')" type="button" class="difficulty-btn btn text-muted bg-warning rounded">Normal</button>
-                    <button onclick="chooseDifficulty('hard')" type="button" class="difficulty-btn btn text-dark bg-danger mx-3 rounded">Insane!!</button>
+                    <button onclick="chooseDifficulty('insane')" type="button" class="difficulty-btn btn text-dark bg-danger mx-3 rounded">Insane!!</button>
                 </div>
+                <!-- Container will show user's previous guesses -->
                 <div id="previous-guesses" class="text-center">
                     <h3 class="text-white fw-bold">Guess List:</h3>
                 </div>
@@ -61,9 +68,5 @@
             
         </div>
     </div>
-    
-    <!-- <h5 class="card-title">Guessing Game</h5>
-    <input type="text">
-    <button type="submit" class="btn btn-success mt-2">Make Guess</button> -->
 </body>
 </html>
